@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin-bottom: 0 !important;
+}
+
+body {
+    background-color: #F2CC0F;
+}
+
+h1 {
+    font-family: 'Pattaya';
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Henny Penny';
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ----------Navbar---------- */
+.navbar {
+    background: linear-gradient(0.25turn, #8CBF3F, #9453a6, #8CBF3F, #9453a6, #0D0D0D, #9453a6, #8CBF3F, #9453a6, #8CBF3F);
+}
+
+.navbar-collapse {
+    justify-content: center;
+}
+
+.nav-link {
+    color: #f2f2f2;
+    font-size: 2rem;
+    font-family: "Henny Penny";
+}
+
+nav img {
+    width: 65px;
+    height: 65px;
+}
+
+/* ----------Carousel---------- */
+.carousel-inner img {
+    max-height: 70vh;
+    object-fit: cover;
+}
+
+.photoDescription {
+    color: #0D0D0D;
+    background-color: rgba(242, 242, 242, .5);
+    /*------------------------------------------------?*/
+    width: 25vw;
+    margin: auto;
+}
+
+/* ----------Sponsers---------- */
+.sponsers {
+    background-color: #f2f2f2;
+}
+
+/* ----------Card---------- */
+.card {
+    background-color: #8CBF3F;
+    height: 100%;
+    border: 1px #0D0D0D solid;
+}
+
+.card .btn {
+    background-color: #9453a6;
+    color: #f2f2f2;
+    border: 1px #0D0D0D solid;
+}
+
+.card .btn:hover {
+    background-color: #290334;
+    transition: 0.2s;
+}
+
+/* ----------Modal---------- */
+.modal-content {
+    background-color: #8CBF3F;
+}
+
+.modal .btn {
+    background-color: #9453a6;
+}
+
+.modal a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-body img {
+    width: 100%;
+    max-height: 200px;
+}
+
+.modal .btn:hover {
+    background-color: #290334;
+    transition: 0.2s;
+}
+
+/* ----------Footer---------- */
+
+footer {
+    background: linear-gradient(217deg, #9453a6, #0D0D0D 70.71%),
+        linear-gradient(127deg, #8CBF3F, #0D0D0D 70.71%),
+        linear-gradient(336deg, #F2CC0F, #0D0D0D 70.71%);
+    /* max-height: 20%;
+    margin-bottom: 0; */
+}
+
+footer p {
+    color: #f2f2f2;
+}
+
+.social-icon {
+    font-size: 4.5rem;
+    margin-right: 3rem;
+}
+
+.social-icon:hover {
+    color: black;
+    transition: 0.2s;
+}
+
+.facebook {
+    color: blue;
+}
+
+.instagram {
+    color: brown;
+}
+
+.whatsapp {
+    color: green;
+}
+
+/* ------------------------------About------------------------------ */
+
+.about-body {
+    background: linear-gradient(0.25turn, #8CBF3F, #f2f2f2, #F2CC0F);
+}
+
+.about-container img {
+    width: 20vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+/* ------------------------------Media------------------------------ */
+
+.media-img {
+    width: 30vw;
+    height: 30vh;
+    object-fit: cover;
+}
+
+/* ------------------------------FAQ------------------------------ */
+
+.faq-body {
+    background: linear-gradient(217deg, #9453a6, rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, #8CBF3F, rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, #F2CC0F, rgba(0, 0, 255, 0) 70.71%);
+}
+
+.accordion-header {
+    font-family: "Pattaya";
+}
+
+.accordion-item {
+    background-color: #8CBF3F;
+}
+
+.accordion-button {
+    background-color: #9453a6;
+}
+
+.accordion-body {
+    font-family: "Roboto";
+}
+
+.alert {
+    visibility: hidden;
+}
+
+/* ------------------------------Contact------------------------------ */
+
+.contact-btn {
+    background-color: #9453a6;
+    border: 1px #0D0D0D solid;
+}
+
+.contact-btn:hover {
+    background-color: #290334;
+}
