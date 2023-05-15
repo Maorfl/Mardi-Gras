@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body class="contact-body">
     <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-dark border-3">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -45,8 +45,8 @@
         </div>
     </nav>
 
-    <div class="container text-center mt-5 mb-5 w-25">
-        <h1 class="display-2 mb-4">Contact Us</h1>
+    <div class="container text-center mt-5 mb-5 w-25 contact-container">
+        <h1 class="display-2 mb-5">Contact Us</h1>
         <div class="form-floating mb-4">
             <input type="text" class="form-control" id="floatingInput1" placeholder="First Name">
             <label for="floatingInput">First Name</label>
@@ -55,7 +55,7 @@
             <input type="text" class="form-control" id="floatingInput2" placeholder="Last Name">
             <label for="floatingInput">Last Name</label>
         </div>
-        <div class="form-floating mb-4">
+        <div class="form-floating mb-5">
             <input type="email" class="form-control" id="floatingInput3" placeholder="Email address">
             <label for="floatingInput">Email address</label>
         </div>
@@ -63,7 +63,7 @@
             <textarea class="form-control" aria-label="With textarea" placeholder="Share with us..."
                 style="height: 15vh;"></textarea>
         </div>
-        <button type="button" class="btn btn-primary mt-4 w-75 contact-btn" onclick="check()">Send</button>
+        <button type="button" class="btn btn-primary w-75 contact-btn mt-5" onclick="check()">Send</button>
         <div class="alert alert-danger mb-5 mt-2" role="alert" id="alerted"></div>
     </div>
 

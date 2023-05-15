@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body class="media-body">
     <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-dark border-3">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -47,27 +47,68 @@
         </div>
     </nav>
 
-    <div class="container">
-        <a href="Images/main1.jpg" data-lightbox="image-1" data-title="Mardi gras"><img src="Images/main1.jpg"
-                alt="Mardi 1" class="media-img"></a>
-        <a href="Images/main2.jpg" data-lightbox="roadtrip"><img src="Images/main2.jpg" alt="Mardi 2"
-                class="media-img"></a>
-        <a href="Images/main3.jpg" data-lightbox="roadtrip"><img src="Images/main3.jpg" alt="Mardi 3"
-                class="media-img"></a>
-        <a href="Images/main4.jpg" data-lightbox="roadtrip"><img src="Images/main4.jpg" alt="Mardi 4"
-                class="media-img"></a>
+    <div class="container mt-4">
+        <!-- Images used to open the lightbox -->
+        <div class="row">
+            <div class="column col-md-6 me-2">
+                <img src="Images/Media-mardi1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow media-img">
+            </div>
+            <div class="column col-md-6">
+                <img src="Images/Media-mardi2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow media-img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column col-md-6">
+                <img src="Images/Media-mardi3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow media-img">
+            </div>
+            <div class="column col-md-6">
+                <img src="Images/Media-mardi4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow media-img">
+            </div>
+        </div>
 
-        <div class="ratio ratio-16x9 w-50 h-50">
+        <!-- The Modal/Lightbox -->
+        <div id="myModal1" class="modal1">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content1">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="Images/Media-mardi1.jpg" style="width:100%" class="media-img2">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="Images/Media-mardi2.jpg" style="width:100%" class="media-img2">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="Images/Media-mardi3.jpg" style="width:100%" class="media-img2">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="Images/Media-mardi4.jpg" style="width:100%" class="media-img2">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <div class="ratio ratio-16x9 w-50 h-50 mb-5 mt-5">
             <iframe src="https://www.youtube.com/embed/EkIZwXbSh-Y" title="YouTube Mardi gras 1" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </div>
-        <div class="ratio ratio-16x9 w-50 h-50">
+        <div class="ratio ratio-16x9 w-50 h-50 mb-5">
             <iframe src="https://www.youtube.com/embed/zuR9lldQuUQ" title="YouTube Mardi gras 2" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
         </div>
     </div>
+
 
     <footer class="border-top border-2 border-dark">
         <div class="text-center">
@@ -84,7 +125,48 @@
         </div>
     </footer>
 
-    <script src="path/to/lightbox.js"></script>
+    <script>
+        // Open the Modal
+        function openModal() {
+            document.getElementById("myModal1").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal1").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
 </body>
 
 </html>
